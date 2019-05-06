@@ -1,10 +1,10 @@
-Print string with variables
+#Print string with variables
     name = 'Fred'
     age = 42
     f'He said his name is {name} and he is {age} years old.'
     >>> He said his name is Fred and he is 42 years old.
     
-Bind functions to list of choices(Menu)
+#Bind functions to list of choices(Menu)
 
 choices = {'1': self.user_account.withdraw,
            '2': self.user_account.deposit,
