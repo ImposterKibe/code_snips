@@ -17,3 +17,15 @@ choices = {'1': self.user_account.withdraw,
                 user_choice()
             else:
 print("Invalid choice. Please try again: ")
+
+# Change the index name using a dict
+# Method 1 
+weathers = ['sunny', 'rainy', 'cloudy']
+weathers_dict = dict(enumerate(weathers, 1))
+
+df_vc = df['weather'].value_counts()
+df_vc.index = df_vc.index.map(weathers_dict.get)
+
+#Method 2
+weather_correspondance_dict = {1:"sunny", 2:"rainy", 3:"cloudy"}
+df["weather"].value_counts().rename(index=weather_correspondance_dict)
