@@ -29,3 +29,21 @@ df_vc.index = df_vc.index.map(weathers_dict.get)
 #Method 2
 weather_correspondance_dict = {1:"sunny", 2:"rainy", 3:"cloudy"}
 df["weather"].value_counts().rename(index=weather_correspondance_dict)
+
+# How to iterate through the rows of a pandas dataframe
+for row in flights.head().itertuples():
+    print(row)
+    
+#Sending and email via jupyter notebook/python
+!pip install secure-smtplib
+
+import smtplib
+sender = "vaell.enquiries@gmail.com" 
+conn = smtplib.SMTP('smtp.gmail.com',587)
+print("type:" , type(conn))
+print("enhlo:",conn.ehlo())
+
+conn.starttls()
+conn.login(sender,'V@3ll3nq')
+conn.sendmail(sender,'receiver',"subject: Sending reminders\n\n Dear Officer,\n\n this is a test email")
+conn.quit()
