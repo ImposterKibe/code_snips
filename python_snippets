@@ -47,3 +47,7 @@ conn.starttls()
 conn.login(sender,'V@3ll3nq')
 conn.sendmail(sender,'receiver',"subject: Sending reminders\n\n Dear Officer,\n\n this is a test email")
 conn.quit()
+
+
+#Convert a jupyter notebook(.ipynb) to python script(.py)
+!jupyter nbconvert --to script followup_emails.ipynb
